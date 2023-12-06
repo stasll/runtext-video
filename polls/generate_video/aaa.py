@@ -16,7 +16,7 @@ def running_text(text):
     line_type = 2
 
     # Создаем видео
-    video = cv2.VideoWriter('c://Users/User/Downloads/runtext/running_text/polls/001.avi', cv2.VideoWriter_fourcc(*'XVID'), 30, (100, 100))
+    video = cv2.VideoWriter('/content/testproject/polls/running_text.avi', cv2.VideoWriter_fourcc(*'XVID'), 30, (100, 100))
 
     # Добавляем текст на каждом кадре
     for i in range(90):
