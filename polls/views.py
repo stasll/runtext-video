@@ -24,8 +24,8 @@ def index(request):
     Возвращает видео как response"""
     text = request.GET.get('text', '')
     video = running_text(text)
-    with open('/content/testproject/polls/running_text.avi', 'rb') as f:
-        response = HttpResponse(f, content_type='video/avi')  # Создаем HTTPResponse с видеофайлом
+    with open('/content/testproject/polls/running_text.mp4', 'rb') as f:
+        response = HttpResponse(f, content_type='video/mp4')  # Создаем HTTPResponse с видеофайлом
         response['Content-Disposition'] = f'attachment; filename="{text}.avi"'  # Устанавливаем имя файла для скачивания
     return response
 
