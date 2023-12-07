@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from django.utils import timezone
 from .models import RequestLog
+from django.views.decorators.csrf import csrf_exempt
 
 from .generate_video.aaa import running_text
 
@@ -16,6 +17,7 @@ def log_request(func):
     return wrapper
 
 # Создаём функцию для ответа сервера
+@csrf_exempt
 @log_request
 def index(request):
     """Получает текст из запроса, обращается к файлу, который создаёт и сохраняет видео.
