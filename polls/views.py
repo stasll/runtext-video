@@ -26,7 +26,7 @@ def index(request):
     video = running_text(text)
     with open('/content/testproject/polls/running_text.mp4', 'rb') as f:
         response = HttpResponse(f, content_type='video/mp4')  # Создаем HTTPResponse с видеофайлом
-        response['Content-Disposition'] = f'attachment; filename="{text}.avi"'  # Устанавливаем имя файла для скачивания
+        response['Content-Disposition'] = f'attachment; filename="{text}.mp4"'  # Устанавливаем имя файла для скачивания
     return response
 
 
